@@ -1,6 +1,6 @@
 # Facebook Advertisement Tools
 
-## This is a set of tools that help you manage Facebook advertisements
+This is a set of tools that help you manage Facebook advertisements
 
 Usage: <todo>
 
