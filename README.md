@@ -11,7 +11,7 @@ It is used to monitor the Facebook spending and send notification to given recei
 ```
 usage: fb_monitor_cost.py [-h] [-c CONFIG] (-m | -a) [-t THRESHOLD]
 
-Facebook Spenting Monitor
+Facebook Spending Monitor
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -26,6 +26,14 @@ optional arguments:
 ```
 
 ## Pre-requisites
+
+For Ubuntu 14.04, you have to update the pip
+```
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+```
+
+Then install the dependencies
 
 ```
 pip3 install facebookads

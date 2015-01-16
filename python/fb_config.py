@@ -5,8 +5,7 @@ class FBConfig:
 	config = None
 
 	def __init__(self, config_filename=None):
-		config_filename = ''
-		if config_filename is None or config_filename == '':
+		if config_filename is None:
 			config_dir = os.getcwd()
 			config_filename = os.path.join(config_dir, 'facebookad.cfg')
 

@@ -73,7 +73,7 @@ class FBMonitor:
 			traceback.print_tb(err)
 
 if __name__ == '__main__':
-	parser = argparse.ArgumentParser(description='Facebook Spenting Monitor')
+	parser = argparse.ArgumentParser(description='Facebook Spending Monitor')
 	parser.add_argument('-c', '--config', help="The absoluate path to configuration file.")
 	extgroup = parser.add_mutually_exclusive_group(required=True)
 	extgroup.add_argument('-m', '--monitor', action='store_true', help='Monitor facebook spending and send message to reveicers')
