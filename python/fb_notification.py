@@ -10,9 +10,9 @@ class FBNotify:
 
     instance = None
 
-    def __init__(self):
+    def __init__(self, config):
         if FBNotify.instance is None:
-            config = fb_config.FBConfig().config
+            config = config
             if ( config.has_section('Email')):
                 self.sender = config.get('Email', 'email_sender')
                 self.receiver = config.get('Email', 'email_receiver').split(',')

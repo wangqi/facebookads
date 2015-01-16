@@ -10,9 +10,8 @@ class FBStore:
 	config = None
 	jsonobj = {"placeholder":1}
 
-	def __init__(self):
-		if FBStore.config is None:
-			FBStore.config = fb_config.FBConfig().config
+	def __init__(self, config):
+		FBStore.config = config
 		if FBStore.config.has_section('JSONStore'):
 			self.json_filename = os.path.join(tempfile.gettempdir(), 'fb_store_json.json')
 			print('temp store file: ', self.json_filename)

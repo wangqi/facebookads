@@ -22,8 +22,8 @@ class FBMonitor:
 		    )
 		FacebookAdsApi.init(*auth_info)
 
-		self.store = fb_store.FBStore()
-		self.notify = fb_notification.FBNotify()
+		self.store = fb_store.FBStore(self.config)
+		self.notify = fb_notification.FBNotify(self.config)
 
 	"""
 		Check the total spent on Facebook account
