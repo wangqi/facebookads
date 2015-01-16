@@ -2,7 +2,28 @@
 
 This is a set of tools that help you manage Facebook advertisements
 
-Usage: <todo>
+## 1st. Tool
+
+### fb_monitor_cost.py
+
+It is used to monitor the Facebook spending and send notification to given receivers
+
+```
+usage: fb_monitor_cost.py [-h] [-c CONFIG] (-m | -a) [-t THRESHOLD]
+
+Facebook Spenting Monitor
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CONFIG, --config CONFIG
+                        The absoluate path to configuration file.
+  -m, --monitor         Monitor facebook spending and send message to
+                        reveicers
+  -a, --alarm           Monitor facebook spending and notify receivers only
+                        when the spending is above the threshold
+  -t THRESHOLD, --threshold THRESHOLD
+                        Specify the threshold that 'alarm' mode will check.
+```
 
 ## Pre-requisites
 
@@ -42,4 +63,31 @@ Go to [Facebook AccessToken Tool](https://developers.facebook.com/tools/debug/ac
 
 Submit your copied access token, you will see ```Expires:Never``` in the response.
 
+## Install
 
+Make a configuration file
+
+```
+[Authentication]
+app_id = <facebook app id>
+app_secret = <facebook app secret>
+access_token = <facebook access token>
+
+[Defaults]
+ad_account = <facebook ads account id>
+
+[Email]
+# Note: SMTP SHOULD SUPPORT SSL
+email_sender = <sender@mail.com>
+# You can specify multi receivers by ','
+# For example: 
+#   email_receiver = user1@mail.com,user2@mail.com
+email_receiver = <receiver@mail.com>
+email_smtpserver = <smtp.mail.com>
+email_username = <sender@mail.com>
+email_password = <password>
+email_port = <port>
+
+[JSONStore]
+# Use JSON to store data
+```
