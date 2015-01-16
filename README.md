@@ -25,6 +25,13 @@ optional arguments:
                         Specify the threshold that 'alarm' mode will check.
 ```
 
+You can also setup a crontab to monitor the facebook spending.
+
+```
+# crontab rule: check facebook spending every hour
+0 * * * * python3 /path/to/fb_monitor_cost.py -c /path/to/facebookads.cfg -m
+```
+
 ## Pre-requisites
 
 For Ubuntu 14.04, you have to update the pip
